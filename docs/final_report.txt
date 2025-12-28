@@ -1,0 +1,86 @@
+
+CRYPTOCURRENCY VOLATILITY PREDICTION - FINAL REPORT
+==================================================
+
+PROJECT OVERVIEW:
+This project implements a machine learning pipeline to predict cryptocurrency volatility
+using historical price, volume, and market capitalization data.
+
+METHODOLOGY:
+1. Data Preprocessing:
+   - Handled missing values using forward fill
+   - Engineered 19 technical features including moving averages, RSI, Bollinger Bands
+   - Normalized features using StandardScaler
+
+2. Feature Engineering:
+   - Price-based features: price_change, high_low_ratio, open_close_ratio
+   - Volatility features: 7-day and 30-day rolling volatility
+   - Technical indicators: RSI, Bollinger Bands, ATR
+   - Volume features: volume ratios and liquidity ratios
+
+3. Model Selection:
+   - Tested 6 different algorithms: Linear Regression, Ridge, Random Forest, 
+     Gradient Boosting, XGBoost, LightGBM
+   - Performed hyperparameter tuning for best performing models
+   - Used time-series aware validation
+
+MODEL PERFORMANCE:
+
+LINEAR_REGRESSION:
+  RMSE: 0.0341
+  MAE:  0.0208
+  R²:   0.5598
+
+RIDGE:
+  RMSE: 0.0338
+  MAE:  0.0208
+  R²:   0.5664
+
+RANDOM_FOREST:
+  RMSE: 0.0252
+  MAE:  0.0150
+  R²:   0.7590
+
+GRADIENT_BOOSTING:
+  RMSE: 0.0220
+  MAE:  0.0145
+  R²:   0.8170
+
+XGBOOST:
+  RMSE: 0.0272
+  MAE:  0.0130
+  R²:   0.7189
+
+LIGHTGBM:
+  RMSE: 0.0261
+  MAE:  0.0146
+  R²:   0.7404
+
+XGBOOST_TUNED:
+  RMSE: 0.0275
+  MAE:  0.0141
+  R²:   0.7121
+
+RANDOM_FOREST_TUNED:
+  RMSE: 0.0261
+  MAE:  0.0151
+  R²:   0.7411
+
+BEST MODEL: GRADIENT_BOOSTING
+Final RMSE: 0.0220
+
+DEPLOYMENT:
+The best performing model has been deployed using Flask API with a web interface
+for real-time volatility predictions.
+
+KEY INSIGHTS:
+- Volatility is highly correlated with volume and price movements
+- Technical indicators provide significant predictive power
+- Ensemble methods (XGBoost, Random Forest) generally outperform linear models
+- Feature engineering is crucial for model performance
+
+FUTURE IMPROVEMENTS:
+- Implement deep learning models (LSTM, GRU) for time-series patterns
+- Add more sophisticated technical indicators
+- Include external factors (news sentiment, market events)
+- Implement real-time data pipeline for live predictions

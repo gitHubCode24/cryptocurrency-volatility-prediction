@@ -278,13 +278,4 @@ The test suite covers:
 - Machine learning algorithms from `scikit-learn`, `xgboost`, and `lightgbm`
 - Visualization powered by `matplotlib`, `seaborn`, and `plotly`
 
-## 📞 Support
-
-For questions or support, please:
-1. Check the [documentation](docs/)
-2. Open an issue on GitHub
-3. Contact the development team
-
----
-
 **Happy Trading! 📈🚀**
